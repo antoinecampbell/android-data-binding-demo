@@ -13,10 +13,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.antoinecampbell.databindingdemo.R;
+import com.antoinecampbell.databindingdemo.fragment.ImageBindingFragment;
+import com.antoinecampbell.databindingdemo.fragment.ImagePlaceholderBindingFragment;
 import com.antoinecampbell.databindingdemo.fragment.RecyclerViewFragment;
 import com.antoinecampbell.databindingdemo.fragment.RecyclerViewTwoWayFragment;
+import com.antoinecampbell.databindingdemo.fragment.SimpleAgeBindingFragment;
 import com.antoinecampbell.databindingdemo.fragment.SimpleBindingFragment;
 import com.antoinecampbell.databindingdemo.fragment.SimpleBindingTwoWayFragment;
+import com.antoinecampbell.databindingdemo.fragment.SimpleColorBindingFragment;
+import com.antoinecampbell.databindingdemo.fragment.SimpleNullBindingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
                     "Simple Data Binding (one way)",
                     "Simple Data Binding (two way)",
                     "RecyclerView Data Binding (one-way)",
-                    "RecyclerView Data Binding (two-way)"
+                    "RecyclerView Data Binding (two-way)",
+                    "Simple Color Data Binding (one-way)",
+                    "Simple Age Data Binding (one-way)",
+                    "Simple Null Data Binding (one-way)",
+                    "Image Data Binding (one-way)",
+                    "Image Placeholder Data Binding (one-way)"
             };
             drawerListView.setAdapter(
                     new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items));
@@ -65,6 +75,21 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 3:
                             fragment = RecyclerViewTwoWayFragment.newInstance();
+                            break;
+                        case 4:
+                            fragment = SimpleColorBindingFragment.newInstance();
+                            break;
+                        case 5:
+                            fragment = SimpleAgeBindingFragment.newInstance();
+                            break;
+                        case 6:
+                            fragment = SimpleNullBindingFragment.newInstance();
+                            break;
+                        case 7:
+                            fragment = ImageBindingFragment.newInstance();
+                            break;
+                        case 8:
+                            fragment = ImagePlaceholderBindingFragment.newInstance();
                             break;
                         default:
                             break;
